@@ -3,11 +3,11 @@ import Navigation from "./components/Navigation";
 
 const Layout = () => {
   return (
-    <>
-      <div className="flex flex-row">
-        <Navigation />
-        <div className="w-full h-max bg-white">
-          <div className="p-5 flex-col bg-secondary w-full h-max">
+    <div className="flex flex-row overflow-hidden">
+      <div className="w-full h-max bg-secondary">
+        <div className="flex flex-row ">
+          <Navigation />
+          <div className="p-5 flex-col">
             <h1 className="text-2xl font-semibold text-primary">
               Race to find the champions
             </h1>
@@ -21,12 +21,12 @@ const Layout = () => {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col w-full h-full">
-            <Outlet />
-          </div>
+        </div>
+        <div className="flex flex-col overflow-hidden">
+          <Outlet />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
